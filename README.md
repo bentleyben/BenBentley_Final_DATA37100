@@ -1,6 +1,7 @@
-# DATA 37100 Final Project — Draft
+# DATA 37100 Final Project
 
 **Student:** Ben Bentley  
+**Course:** DATA 37100 (Winter 2026)
 **Research Question:** In a small-budget MNIST diffusion setup, how do timestep count (T) and prediction target (eps vs x0) affect sample quality and failure modes?
 
 ---
@@ -11,13 +12,13 @@
 # Navigate to repo root
 
 # Run baselines (Diffusion + DCGAN)
-bash final/draft/run_baselines.sh
+bash final/deliverables/run_baselines.sh
 
 # Run controlled experiment (T × target grid)
-bash final/draft/run_experiment.sh
+bash final/deliverables/run_experiment.sh
 
 # Analyze results
-jupyter notebook final/draft/analysis.ipynb
+jupyter notebook final/deliverables/analysis.ipynb
 ```
 
 **Expected total runtime:** ~7-15 minutes on Apple Silicon `mps`
@@ -27,21 +28,19 @@ jupyter notebook final/draft/analysis.ipynb
 ## Project Structure
 
 ```
-final/draft/
+final/deliverable/
 ├── README.md              # This file
 ├── run_baselines.sh       # Runs 2 baseline models (Diffusion + DCGAN)
 ├── run_experiment.sh      # Runs 6-run grid experiment (T × target)
 ├── analysis.ipynb         # Jupyter notebook for visualization and analysis
-└── report.md              # Final report (~3-5 pages)
+├── report.md              # Final report (~3-5 pages)
+└── report.pdf             # Final report in PDF format
 
 final/starter/src/         # Provided starter code
 ├── diffusion_baseline.py  # Diffusion model training script
 ├── gan_baseline.py        # DCGAN training script
 ├── transformer_baseline.py
 └── utils_data.py          # Data loading utilities
-
-final/tools/
-└── visualize_samples.py   # Contact sheet generator
 
 untrack/outputs/final/     # Output directory (not committed)
 ├── diffusion/             # Diffusion runs
@@ -174,12 +173,12 @@ The notebook will:
 ### B. Repository Hygiene
 
 1. **README:** This file (setup, run commands, hardware notes)
-2. **No large data:** MNIST is downloaded on-the-fly (not committed)
+2. **No large data:** MNIST is downloaded on-the-fly 
 3. **Outputs in untrack/:** All outputs go to `./untrack/` (gitignored)
 
-### C. Summary Report (Required)
+### C. Summary Report 
 
-**File:** `report.md` (~3-5 pages)
+**File:** `report.md` 
 
 **Contents:**
 1. Research question + motivation
@@ -209,18 +208,8 @@ The notebook will:
 
 ---
 
-## Model Coverage (Meets Requirements)
+## Model Coverage
 
-- ✅ **Diffusion** (Week 7): Baseline + controlled experiment
-- ✅ **DCGAN** (Week 4): Baseline
-- Total: **2 model families** (satisfies "at least two" requirement)
-
----
-
-## Contact
-
-**Student:** Ben Bentley
-**Course:** DATA 37100 (Winter 2026)
-**Instructor:** [Course instructor]
-
-For questions about this project, see the final report (`report.md`) or analysis notebook (`analysis.ipynb`).
+- **Diffusion** (Week 7): Baseline + controlled experiment
+- **DCGAN** (Week 4): Baseline
+- Total: **2 model families** 
