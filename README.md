@@ -42,6 +42,9 @@ final/starter/src/         # Provided starter code
 ├── transformer_baseline.py
 └── utils_data.py          # Data loading utilities
 
+final/tools/
+└── visualize_samples.py   # Contact sheet generator
+
 untrack/outputs/final/     # Output directory (not committed)
 ├── diffusion/             # Diffusion runs
 │   ├── results.csv        # Experiment manifest
